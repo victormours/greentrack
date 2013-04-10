@@ -1,7 +1,9 @@
 <h1>Current projects</h1><br>
+<ul>
 <% @projects.each do |project| %>
-    <%= project.name %><br>
+    <li><%= link_to project.name, project %></li>
 <% end %>
+</ul>
 
 
 <%= form_for Project.new, :url => { :action => "create" } do |f| %>
