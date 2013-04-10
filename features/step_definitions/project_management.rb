@@ -3,15 +3,16 @@ Given(/^I visit the home page\.$/) do
 end
 
 When(/^I select "(.*?)"$/) do |label|
-  click_button label
+  click_link_or_button label
 end
 
-Then(/^I can name my project "(.*?)"$/) do |project_name|
-  fill_in "Name",    with: project_name
+When(/^I enter the name "(.*?)" for the project$/) do |name|
+  fill_in "project[name]",    with: name
 end
 
-Then(/^I am taken to the project viewing page$/) do
-  pending # express the regexp above with the code you wish you had
+Then(/^I am taken to the project viewing page for "(.*?)"$/) do |project_name|
+  save_and_open_page
+  assert page.has_content?("<h1>#{project_name}</h1>"), page.content
 end
 
 Given(/^there exists a project called "(.*?)"$/) do |arg1|

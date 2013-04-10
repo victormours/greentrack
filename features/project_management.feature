@@ -8,9 +8,9 @@ Background:
     Given I visit the home page.
 
 Scenario: Creating a project
-    When I select "new project"
-    Then I can name the new project project "Project A"
-    And I am taken to the project viewing page
+    When I enter the name "Cool Project" for the project
+    And I select "Create"
+    Then I am taken to the project viewing page for "Cool Project"
 
 Scenario: Viewing a project
     Given there exists a project called "Project A"
