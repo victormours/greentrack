@@ -11,7 +11,7 @@ group :development do
 end
 
 group :production do
-    gem install activerecord-postgresql-adapter
+    gem "pg", "~> 0.15.1"
 end
 
 # Gems used only for assets and not required
