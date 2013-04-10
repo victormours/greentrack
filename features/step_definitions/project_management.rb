@@ -11,12 +11,11 @@ When(/^I enter the name "(.*?)" for the project$/) do |name|
 end
 
 Then(/^I am taken to the project viewing page for "(.*?)"$/) do |project_name|
-  save_and_open_page
-  assert page.has_content?("<h1>#{project_name}</h1>"), page.content
+  page.assert_selector('h1', text: project_name)
 end
 
-Given(/^there exists a project called "(.*?)"$/) do |arg1|
-  pending # express the regexp above with the code you wish you had
+Given(/^there exists a project called "(.*?)"$/) do |project_name|
+  Project.new(name: project_name).save!
 end
 
 Then(/^I see a page displaying the project's information$/) do

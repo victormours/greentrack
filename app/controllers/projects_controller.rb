@@ -11,7 +11,6 @@ def create
     else
         render action: :index
     end
-
 end
 
 def show

@@ -23,7 +23,6 @@ Scenario: Modifying a project name
     And I change the name to "Project B"
     Then the project's name on the display page is changed to "Project B"
 
-
 Scenario: Deleting a project
     Given I am viewing a project
     When I select the project's settings
