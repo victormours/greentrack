@@ -10,7 +10,7 @@ Background:
 
 Scenario: Creating an empty feature
     When I select "Create"
-    Then I am taken to the feature editing page
+    Then I am taken to the feature creation page
     When I enter the feature name "Awesome Feature"
     And I select "Save"
     Then I am taken to the feature view page for "Awesome Feature"
