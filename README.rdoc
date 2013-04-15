@@ -1,1 +1,2 @@
+Hello !
 GreenTrack is a proof-of-concept application for a research project on the use of BDD as a task and progress tracking tool.
