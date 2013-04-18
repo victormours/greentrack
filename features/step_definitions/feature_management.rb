@@ -10,14 +10,14 @@ Then(/^I am taken to the feature creation page$/) do
   assert page.has_css?("form [id=new_feature]")
 end
 
-When(/^I enter the feature name "(.*?)"$/) do |arg1|
-  pending # express the regexp above with the code you wish you had
+When(/^I enter the feature name "(.*?)"$/) do |feature_name|
+    fill_in "feature[name]",    with: feature_name
 end
 
-Then(/^I am taken to the feature view page for "(.*?)"$/) do |arg1|
-  pending # express the regexp above with the code you wish you had
+Then(/^I am taken to the feature view page for "(.*?)"$/) do |feature_name|
+    page.assert_selector('h1', text: feature_name)
 end
 
 Then(/^I see there are no scenarios for this feature yet$/) do
-  pending # express the regexp above with the code you wish you had
+    assert page.has_content?("There are no scenarios for this feature yet.")
 end

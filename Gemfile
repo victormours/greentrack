@@ -5,6 +5,7 @@ gem "bootstrap-sass", "~> 2.3.1.0"
 
 group :development do
     gem 'sqlite3'
+    gem 'rspec-rails'
 end
 
 group :production do
