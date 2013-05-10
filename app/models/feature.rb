@@ -3,7 +3,7 @@ class Feature < ActiveRecord::Base
     validates :project_id, presence: true
     validates :name, presence: true
     belongs_to :project
-    has_many :scenario
+    has_many :scenarios
 
     after_initialize :set_default_name
     def set_default_name
