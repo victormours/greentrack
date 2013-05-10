@@ -1,4 +1,5 @@
-<p>
+<p class="fields">
   <%= f.select(:prefix, [['Given', 'Given'], ['When', 'When'], ['Then','Then'], ['And','And'], ['But','But']]) %>
   <%= f.text_field :regex %>
+  <%= link_to_remove_fields "remove", f %>
 </p>

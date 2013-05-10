@@ -1,9 +1,11 @@
 <h1><%= @scenario.name %></h1>
 
-<ul>
+<table>
 <% @steps.each do |step| %>
-  <li><%= step.prefix + " " + step.regex %></li>
+  <tr>
+  <td><%= step.prefix %></td> <td><%= step.regex %></td>
+</tr>
 <% end %>
-</ul>
+</table>
 
 <%= link_to "Edit", edit_scenario_path(@scenario.id) %>
