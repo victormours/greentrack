@@ -1,0 +1,12 @@
+<%= form_for @scenario do |f| %>
+  <p>
+    <%= f.text_field :name %>
+  </p>
+  <h2>Steps</h2>
+  <%= f.fields_for :steps do |builder| %>
+    <%= render "step_fields", :f => builder %>
+  <% end %>
+  <p><%= link_to_add_fields "Add Step", f, :steps %></p>
+  <p><%= f.submit "Save" %></p>
+<% end %>
+

@@ -9,5 +9,7 @@ Greentrack::Application.routes.draw do
         resources :scenarios, only: [:new, :create, :edit, :update]
     end
 
-    resources :scenarios, only: [:show]
+    resources :scenarios, only: [:show, :create, :edit, :update] do
+      resources :steps, only: [:new, :create]
+    end
 end

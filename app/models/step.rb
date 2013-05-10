@@ -1,3 +1,3 @@
 class Step < ActiveRecord::Base
-  # attr_accessible :title, :body
+  attr_accessible :prefix, :regex
 end

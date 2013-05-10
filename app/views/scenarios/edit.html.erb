@@ -1,5 +1,2 @@
 <h1><%=@scenario.name%></h1>
-<%= form_for @scenario, :url => { :action => "update" } do |f| %>
-  <%= f.text_field :name %>
-  <%= f.submit "Change name" %>
-<% end %>
+<%= render "form" %>

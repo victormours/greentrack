@@ -4,6 +4,6 @@ Given(/^the feature "(.*?)" has a scenario called "(.*?)"$/) do |feature_name, s
   @scenario.save!
 end
 
-Given(/^I am viewing this scenario$/) do
+Given(/^I am editing this scenario$/) do
     visit "/scenarios/#{@scenario.id}"
 end

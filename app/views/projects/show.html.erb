@@ -1,5 +1,10 @@
 <h1><%=@project.name%></h1>
 
 <h2>Features</h2>
+<ul>
+<% @features.each do |feature| %>
+  <li><%= link_to feature.name, feature_path(feature) %></li>
+<% end %>
+</ul>
 
 <%= link_to "Create", new_project_feature_path(@project) %>

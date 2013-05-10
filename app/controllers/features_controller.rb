@@ -17,6 +17,7 @@ end
 
 def show
     @feature = Feature.find(params[:id])
+    @scenarios = @feature.scenarios
 end
 
 end

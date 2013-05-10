@@ -15,6 +15,7 @@ end
 
 def show
     @project = Project.find(params[:id])
+    @features = @project.features
 end
 
 end

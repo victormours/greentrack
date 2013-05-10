@@ -2,5 +2,14 @@
 
 <h2>Scenarios</h2>
 
-There are no scenarios for this feature yet.
+<% if @scenarios.empty? %>
+  <p>There are no scenarios for this feature yet.</p>
+<% else %>
+<ul>
+  <% @scenarios.each do |scenario| %>
+    <li><%= link_to scenario.name, scenario_path(scenario) %></li>
+  <% end %>
+</ul>
+<% end %>
+
 <%= link_to "New Scenario", new_feature_scenario_path(@feature) %>
